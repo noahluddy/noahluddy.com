@@ -152,7 +152,7 @@
                             default:
                                 var top_text = top_post.selftext_html;  // Calling selftext_html rather than just selftext preserves the original style (paragraphs, number lists, etc...)
                                 top_text.then(function(result) {
-                                    if (result != '' && result != '.') {
+                                    if (result != '' && result != '.' && result != null) {
                                         document.getElementById('text').innerHTML = result;
                                     } else {  // Self Text is empty, so we'll move the title more to the center of the page
                                         document.getElementById('title').style.marginTop = '120px';
