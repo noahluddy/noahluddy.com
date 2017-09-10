@@ -104,7 +104,7 @@
 
                 var go = true;
 
-                var submissions = r.getSubreddit('getmotivated').getHot({limit:10})
+                var submissions = r.getSubreddit('getmotivated').getHot({limit:20})
                     .catch(function(err) {  // If something goes wrong connecting to reddit
                         console.log(err);
                         error();
