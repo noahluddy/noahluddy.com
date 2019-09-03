@@ -2,15 +2,19 @@
 
 <!doctype html>
 <html>
+
     <head>
         <title>Get Motivated Today!</title>
-        <script src="https://not-an-aardvark.github.io/snoowrap/snoowrap-v1.min.js"></script>  <!-- This is the Reddit API Wrapper I used. It is pure Javascript and runs in the browser, meaning no calls to a local server are necessary. -->
-        <link rel='shortcut icon' href='gm-favicon.ico' type='image/x-icon'/>  <!-- I got this image from Pixabay: https://pixabay.com/en/strong-arm-muscle-muscles-310873/ The image was labeled for free commercial use under Creative Commons CC0. Thanks Pixabay!-->
+        <script src="https://not-an-aardvark.github.io/snoowrap/snoowrap-v1.min.js"></script>
+        <!-- This is the Reddit API Wrapper I used. It is pure Javascript and runs in the browser, meaning no calls to a local server are necessary. -->
+        <link rel='shortcut icon' href='gm-favicon.ico' type='image/x-icon' />
+        <!-- I got this image from Pixabay: https://pixabay.com/en/strong-arm-muscle-muscles-310873/ The image was labeled for free commercial use under Creative Commons CC0. Thanks Pixabay!-->
         <style>
             body {
                 color: grey;
                 font-family: Calibri, sans-serif;
-                background-image: url(http://static.tumblr.com/ybdgkw4/ffzkxsss6/bg-400-paper2.jpg);  /* This is the same background as www.fuckinghomepage.com for the curious */
+                background-image: url(http://static.tumblr.com/ybdgkw4/ffzkxsss6/bg-400-paper2.jpg);
+                /* This is the same background as www.fuckinghomepage.com for the curious */
             }
 
             h1 {
@@ -39,7 +43,8 @@
                 color: grey;
             }
 
-            #image, #imgur-album {
+            #image,
+            #imgur-album {
                 border-radius: 2%;
                 box-shadow: 0 0 40px dimgrey;
                 width: 600px;
@@ -62,6 +67,7 @@
 
             #name {
                 text-align: right;
+                width: 250px;
                 right: 20px;
             }
 
@@ -73,13 +79,19 @@
             #box {
                 height: 1px;
             }
+
+            #source-code {
+                font-size: 18px;
+            }
         </style>
     </head>
 
     <body onload="getPost()">
         <p id="error"></p>
 
-        <a id="title-link" class="link"><h1 id="title"></h1></a>
+        <a id="title-link" class="link">
+            <h1 id="title"></h1>
+        </a>
 
         <img id="image" class="content">
 
@@ -89,9 +101,13 @@
 
         <p id="box"></p>
 
-        <div id="name" class="footer">Made with <span id="heart">&hearts;</span> by <a href="http://www.noahluddy.com" class="link">Noah Luddy</a></div>
+        <div id="name" class="footer">Made with <span id="heart">&hearts;</span> by <a href="http://www.noahluddy.com"
+                class="link">Noah Luddy</a> <span id="source-code"><a
+                    href="https://github.com/noahluddy/noahluddy.com/blob/master/get-motivated.html" class="link">Source
+                    Code</a></span></div>
 
-        <div id="info" class="footer">This is <span id="err1">the current</span> top post <span id="err2"></span> on <a href="https://www.reddit.com/r/GetMotivated" class="link">www.reddit.com/r/GetMotivated</a></div>
+        <div id="info" class="footer">This is <span id="err1">the current</span> top post <span id="err2"></span> on <a
+                href="https://www.reddit.com/r/GetMotivated" class="link">www.reddit.com/r/GetMotivated</a></div>
 
         <script type="text/javascript">
             function getPost() {
@@ -104,8 +120,8 @@
 
                 var go = true;
 
-                var submissions = r.getSubreddit('getmotivated').getHot({limit:20})
-                    .catch(function(err) {  // If something goes wrong connecting to reddit
+                var submissions = r.getSubreddit('getmotivated').getHot({ limit: 20 })
+                    .catch(function (err) {  // If something goes wrong connecting to reddit
                         console.log(err);
                         error();
                         go = false;
@@ -113,7 +129,7 @@
 
                 var top_post = submissions.filter(post => post.link_flair_css_class != 'discussion' && post.link_flair_css_class != 'tool' && post.link_flair_css_class != 'meta' && post.link_flair_css_class != 'sun' && post.link_flair_css_class != null && post.score > 99 && !post.url.endsWith('gifv') && !post.url.endsWith('gif'))[0];
 
-                top_post.then(function(result) {  // For debugging purposes and so users can see what the structure of the submission object looks like
+                top_post.then(function (result) {  // For debugging purposes and so users can see what the structure of the submission object looks like
                     console.log(result);
                     if (result == undefined) {
                         error();
@@ -123,20 +139,20 @@
 
                 if (go) {
                     var top_title = top_post.title;
-                    top_title.then(function(result) {
-                    title = fixTitle(result);
-                    document.getElementById('title').innerHTML = title;
+                    top_title.then(function (result) {
+                        title = fixTitle(result);
+                        document.getElementById('title').innerHTML = title;
                     });
 
-                    top_post.permalink.then(function(result) {
-                      document.getElementById('title-link').href = "https://www.reddit.com" + result;
+                    top_post.permalink.then(function (result) {
+                        document.getElementById('title-link').href = "https://www.reddit.com" + result;
                     });
 
-                    top_post.link_flair_css_class.then(function(result) {
+                    top_post.link_flair_css_class.then(function (result) {
                         switch (result) {
                             case 'image':
                                 var img_url = top_post.url;
-                                img_url.then(function(result) {
+                                img_url.then(function (result) {
                                     result = fixImgurLink(result);
                                     document.getElementById('image').src = result;
                                 });
@@ -144,14 +160,14 @@
                             case 'video':
                             case 'article':
                                 var content_url = top_post.url;
-                                content_url.then(function(result) {
+                                content_url.then(function (result) {
                                     document.getElementById('video-article').href = result;
                                     document.getElementById('video-article').innerHTML = result;
                                 })
                                 break;
                             default:
                                 var top_text = top_post.selftext_html;  // Calling selftext_html rather than just selftext preserves the original style (paragraphs, number lists, etc...)
-                                top_text.then(function(result) {
+                                top_text.then(function (result) {
                                     if (result != '' && result != '.' && result != null) {
                                         document.getElementById('text').innerHTML = result;
                                     } else {  // Self Text is empty, so we'll move the title more to the center of the page
@@ -165,7 +181,7 @@
             }
 
             function fixTitle(title) {  // Gets rid of the default title tags automatically given to each post by GetMotivated. Also gets rid of anything in parentheses. Also capitalizes the title if it is not already.
-                var almostFixed = title.substring(title.indexOf(']')+1, title.indexOf('(') > 0 ? title.indexOf('(') : title.length);
+                var almostFixed = title.substring(title.indexOf(']') + 1, title.indexOf('(') > 0 ? title.indexOf('(') : title.length);
                 var letter = '';
                 var index;
                 if (almostFixed.substring(0, 1) == ' ') {  // If [Image] title
@@ -182,7 +198,7 @@
                 if (link.indexOf('imgur') === -1 || link.substring(7, 9) === 'i.') {  // If nothing is wrong
                     return link;
                 } else if (link.indexOf('/gallery/') != -1) {  // If imgur.com/gallery/picID
-                    return 'http://imgur.com/' + link.substring(link.indexOf('y/')+2) + '.jpg';
+                    return 'http://imgur.com/' + link.substring(link.indexOf('y/') + 2) + '.jpg';
                 } else {  // If imgur.com/picID
                     return link + '.jpg';  // Even if the file isn't a jpg, imgur still accepts the .jpg extension to view the content. (Thanks Imgur!)
                 }
@@ -199,12 +215,15 @@
 
         <script>
             // This is Google Analytics, which allows me to see how many people visit the site
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
             ga('create', 'UA-86722706-1', 'auto');
             ga('send', 'pageview');
         </script>
     </body>
+
 </html>
