@@ -1,203 +1,226 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-    <meta name="description" content="Noah Luddy is a student at Washington University in St. Louis">
-    <meta name="google-site-verification" content="i-QgyD0QhKy_1NoTFaoaSGyS6JBBjYHwEkN7vfniqgk" />
-    <title>Noah Luddy</title>
-    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon"/>
-    <link rel="icon" href="favicon.ico?" type="image/x-icon"/>
-    <style>
-      html {
-        height: 100%;
-        font-family: Source Sans Pro, Lato, Calibri, sans-serif;
-        color: azure;
-        overflow: hidden;
-      }
-      body {
-        background: steelblue; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(left top, lightsalmon, steelblue); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom right, lightsalmon, steelblue); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom right, lightsalmon, steelblue); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom right, lightsalmon, steelblue); /* Standard syntax (must be last) */
-      }
-      #text-container {
-        margin-left: 6%;
-        margin-top: 17%;
-        font-weight: normal;
-        z-index: 10;
-      }
-      #name {
-        font-weight: inherit;
-        font-size: 48px;
-      }
-      #first-sub {
-        margin-top: -25px;
-      }
-      .subtitle {
-        font-weight: inherit;
-        font-style: italic;
-        margin-top: -15px;
-      }
-      a {
-        text-decoration: none;
-        color: dodgerblue;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      #links {
-        margin-top: -12px;
-        font-size: 23px;
-        font-weight: normal;
-      }
-      #particles-js {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        margin-top: -240px;
-        margin-left: -8px;
-        z-index: -1;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="particles-js"></div>
-    <div id="text-container">
-      <h1 id="name">Noah Luddy</h1>
-      <h2 id="first-sub" class="subtitle">Software Engineering Intern at <a href="https://www.google.com" target="_blank">Google</a></h2>
-      <h2 class="subtitle">Co-Director ('17 - '19) + Advisor ('19 - Present) of <a href="https://archhacks.io" target="_blank">ArchHacks</a><h2>
-      <h2 class="subtitle">Computer Science + Marketing at <a href="https://www.wustl.edu" target="_blank">WashU</a></h2>
-      <div id="links">
-<!--    <a href="Luddy_Resume.pdf" target="_blank">r&eacute;sum&eacute;</a> /  -->
-        <a href="https://github.com/noahluddy" target="_blank">projects</a> /
-<!--    (WashU)     <a href="http://www.google.com/recaptcha/mailhide/d?k=01Sl9x6oeZ0jtSL3OtQqOBrw==&amp;c=8DsL9K3OnR4yq4meZGy6CcyuyjQeixL4D3Eo_PuNCPs=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01Sl9x6oeZ0jtSL3OtQqOBrw\x3d\x3d\x26c\x3d8DsL9K3OnR4yq4meZGy6CcyuyjQeixL4D3Eo_PuNCPs\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">contact me</a> -->
-        <a href="http://www.google.com/recaptcha/mailhide/d?k=01oXtIljFLQAnaywx9H0ciEg==&amp;c=_PlCSqWQDRXw1uakplY65V08LipHl9YRV4HvIwmmaVQ=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01oXtIljFLQAnaywx9H0ciEg\x3d\x3d\x26c\x3d_PlCSqWQDRXw1uakplY65V08LipHl9YRV4HvIwmmaVQ\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">contact me</a>
-        <br><br>
-        <a href="/get-motivated.html">Get Motivated!</a>
-      </div>
-    </div>
-    <script src="particles.js"></script>
-    <script>
-      particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 100,
-            "density": {
-              "enable": false,
-              "value_area": 800
+
+    <head>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+        <meta name="description" content="Noah Luddy is a student at Washington University in St. Louis">
+        <meta name="google-site-verification" content="i-QgyD0QhKy_1NoTFaoaSGyS6JBBjYHwEkN7vfniqgk" />
+        <title>Noah Luddy</title>
+        <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico?" type="image/x-icon" />
+        <style>
+            html {
+                height: 100%;
+                font-family: Source Sans Pro, Lato, Calibri, sans-serif;
+                color: azure;
+                overflow: hidden;
             }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
+
+            body {
+                background: steelblue;
+                /* For browsers that do not support gradients */
+                background: -webkit-linear-gradient(left top, lightsalmon, steelblue);
+                /* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(bottom right, lightsalmon, steelblue);
+                /* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(bottom right, lightsalmon, steelblue);
+                /* For Firefox 3.6 to 15 */
+                background: linear-gradient(to bottom right, lightsalmon, steelblue);
+                /* Standard syntax (must be last) */
             }
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
+
+            #text-container {
+                margin-left: 6%;
+                margin-top: 17%;
+                font-weight: normal;
+                z-index: 10;
             }
-          },
-          "size": {
-            "value": 4,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 40,
-              "size_min": 0.1,
-              "sync": false
+
+            #name {
+                font-weight: inherit;
+                font-size: 48px;
             }
-          },
-          "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 2,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
+
+            #first-sub {
+                margin-top: -25px;
             }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": false,
-              "mode": "repulse"
-            },
-            "onclick": {
-              "enable": false,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 316.71011279752463,
-              "line_linked": {
-                "opacity": 0
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
+
+            .subtitle {
+                font-weight: inherit;
+                font-style: italic;
+                margin-top: -15px;
             }
-          }
-        },
-        "retina_detect": true
-      });
-    </script>
-    <script>
-      // Google Analytics
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-104384013-1', 'auto');
-      ga('send', 'pageview');
-     </script>
-  </body>
+
+            a {
+                text-decoration: none;
+                color: dodgerblue;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            #links {
+                margin-top: -12px;
+                font-size: 23px;
+                font-weight: normal;
+            }
+
+            #particles-js {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                margin-top: -240px;
+                margin-left: -8px;
+                z-index: -1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="particles-js"></div>
+        <div id="text-container">
+            <h1 id="name">Noah Luddy</h1>
+            <h2 id="first-sub" class="subtitle">Software Engineering Intern at <a href="https://www.google.com"
+                    target="_blank">Google</a></h2>
+            <h2 class="subtitle">Co-Director ('17 - '19) + Advisor ('19 - Present) of <a href="https://archhacks.io"
+                    target="_blank">ArchHacks</a>
+            </h2>
+            <h2 class="subtitle">Computer Science + Marketing at <a href="https://www.wustl.edu"
+                    target="_blank">WashU</a></h2>
+            <div id="links">
+                <a href="https://github.com/noahluddy" target="_blank">projects</a> /
+                <a href=""
+                    onclick="var win = window.open('', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); win.document.body.innerHTML = 'noah [at] noahluddy.com';"
+                    title="Reveal my e-mail address">contact me</a>
+                <br><br>
+                <a href="/get-motivated.html">Get Motivated!</a>
+            </div>
+        </div>
+        <script src="particles.js"></script>
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 100,
+                        "density": {
+                            "enable": false,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 4,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": false,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": false,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 316.71011279752463,
+                            "line_linked": {
+                                "opacity": 0
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
+        <script>
+            // Google Analytics
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-104384013-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+
 </html>
