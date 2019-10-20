@@ -180,8 +180,8 @@
                 }
             }
 
-            function fixTitle(title) {  // Gets rid of the default title tags automatically given to each post by GetMotivated. Also gets rid of anything in parentheses. Also capitalizes the title if it is not already.
-                var almostFixed = title.substring(title.indexOf(']') + 1, title.indexOf('(') > 0 ? title.indexOf('(') : title.length);
+            function fixTitle(title) {  // Gets rid of the default title tags automatically given to each post by GetMotivated. Also capitalizes the title if it is not already.
+                var almostFixed = title.replace(/ *\[[^)]*\] */g, ""); // I got this regex from here: https://stackoverflow.com/questions/4292468/javascript-regex-remove-text-between-parentheses
                 var letter = '';
                 var index;
                 if (almostFixed.substring(0, 1) == ' ') {  // If [Image] title
