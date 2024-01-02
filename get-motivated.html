@@ -149,17 +149,17 @@
                         document.getElementById('title-link').href = "https://www.reddit.com" + result;
                     });
 
-                    top_post.link_flair_css_class.then(function (result) {
+                    top_post.link_flair_text.then(function (result) {
                         switch (result) {
-                            case 'image':
+                            case 'IMAGE':
                                 var img_url = top_post.url;
                                 img_url.then(function (result) {
                                     result = fixImgurLink(result);
                                     document.getElementById('image').src = result;
                                 });
                                 break;
-                            case 'video':
-                            case 'article':
+                            case 'VIDEO':
+                            case 'ARTICLE':
                                 var content_url = top_post.url;
                                 content_url.then(function (result) {
                                     document.getElementById('video-article').href = result;
