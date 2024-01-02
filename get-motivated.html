@@ -128,7 +128,7 @@
                         go = false;
                     });
 
-                var top_post = submissions.filter(post => post.link_flair_css_class != 'discussion' && post.link_flair_css_class != 'tool' && post.link_flair_css_class != 'meta' && post.link_flair_css_class != 'sun' && post.link_flair_text != 'Announcement' && post.score > 99 && !post.url.endsWith('gifv') && !post.url.endsWith('gif'))[0];
+                var top_post = submissions.filter(post => post.link_flair_text != 'Announcement' && post.score > 99 && !post.url.endsWith('gifv') && !post.url.endsWith('gif'))[0];
 
                 top_post.then(function (result) {
                     console.log(result); // For debugging purposes and so users can see what the structure of the submission object looks like
