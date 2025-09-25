@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4X3YNG2MD"></script>
         <script>
@@ -11,7 +13,6 @@
 
             gtag('config', 'G-Y4X3YNG2MD');
         </script>
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
         <meta name="description" content="Noah Luddy is a Software Engineer (Ex-Google)">
         <meta name="google-site-verification" content="i-QgyD0QhKy_1NoTFaoaSGyS6JBBjYHwEkN7vfniqgk" />
         <title>Noah Luddy</title>
@@ -30,16 +31,7 @@
                 height: 100vh;
                 margin: 0;
                 padding: 0;
-                background: steelblue;
-                /* For browsers that do not support gradients */
-                background: -webkit-linear-gradient(left top, lightsalmon, steelblue);
-                /* For Safari 5.1 to 6.0 */
-                background: -o-linear-gradient(bottom right, lightsalmon, steelblue);
-                /* For Opera 11.1 to 12.0 */
-                background: -moz-linear-gradient(bottom right, lightsalmon, steelblue);
-                /* For Firefox 3.6 to 15 */
                 background: linear-gradient(to bottom right, lightsalmon, steelblue);
-                /* Standard syntax (must be last) */
             }
 
             #text-container {
@@ -48,6 +40,18 @@
                 margin-top: 6%;
                 font-weight: normal;
                 z-index: 10;
+                animation: fadeInUp 1s ease-out;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             @media (max-width: 768px) {
@@ -61,7 +65,7 @@
                 }
                 
                 .subtitle {
-                    font-size: 18px;
+                    font-size: 22px;
                 }
                 
                 #links {
@@ -81,19 +85,27 @@
             .subtitle {
                 font-weight: inherit;
                 margin-top: -15px;
+                font-size: 28px;
             }
 
             a {
                 text-decoration: none;
-                color: dodgerblue;
+                color: #1e90ff;
+                transition: color 0.3s ease;
             }
 
             a:hover {
                 text-decoration: underline;
+                color: #ffffff;
+            }
+
+            a:focus {
+                outline: 2px solid #ffffff;
+                outline-offset: 2px;
             }
 
             #links {
-                margin-top: -12px;
+                margin-top: 20px;
                 font-size: 23px;
                 font-weight: normal;
             }
@@ -111,19 +123,21 @@
 
     <body>
         <div id="particles-js"></div>
-        <div id="text-container">
-            <h1 id="name">Noah Luddy</h1>
-            <h2 id="first-sub" class="subtitle">Software Engineer (Ex-Google)</h2>
-            <div id="links">
-                <a href="https://github.com/noahluddy" target="_blank">GitHub</a> /
-                <a href="https://www.linkedin.com/in/noahluddy" target="_blank">LinkedIn</a> /
-                <a href=""
+        <main id="text-container">
+            <header>
+                <h1 id="name">Noah Luddy</h1>
+                <p id="first-sub" class="subtitle">Software Engineer (Ex-Google)</p>
+            </header>
+            <nav id="links" aria-label="Social links and contact">
+                <a href="https://github.com/noahluddy" target="_blank" rel="noopener">GitHub</a> /
+                <a href="https://www.linkedin.com/in/noahluddy" target="_blank" rel="noopener">LinkedIn</a> /
+                <a href="javascript:void(0)"
                     onclick="var win = window.open('', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); win.document.body.innerHTML = 'noah [at] noahluddy [dot] com';"
                     title="Reveal my e-mail address">contact me</a>
                 <br><br>
-                <a href="https://noahluddy.github.io/get-motivated/" target="_blank">Get Motivated!</a>
-            </div>
-        </div>
+                <a href="https://noahluddy.github.io/get-motivated/" target="_blank" rel="noopener">Get Motivated!</a>
+            </nav>
+        </main>
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script>
             particlesJS("particles-js", {
