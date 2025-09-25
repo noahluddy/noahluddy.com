@@ -2,8 +2,6 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4X3YNG2MD"></script>
         <script>
@@ -13,112 +11,58 @@
 
             gtag('config', 'G-Y4X3YNG2MD');
         </script>
-        <meta name="description" content="Noah Luddy is a Software Engineer (Ex-Google)">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+        <meta name="description" content="Noah Luddy is a Software Engineer (Ex-Google). Explore my projects, connect on LinkedIn, or get in touch.">
+        <meta name="keywords" content="Noah Luddy, Software Engineer, Google, GitHub, LinkedIn, Web Developer, Programmer">
+        <meta name="author" content="Noah Luddy">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.noahluddy.com/">
+        <meta property="og:title" content="Noah Luddy - Software Engineer">
+        <meta property="og:description" content="Software Engineer (Ex-Google). Explore my projects, connect on LinkedIn, or get in touch.">
+        <meta property="og:site_name" content="Noah Luddy">
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary">
+        <meta property="twitter:url" content="https://www.noahluddy.com/">
+        <meta property="twitter:title" content="Noah Luddy - Software Engineer">
+        <meta property="twitter:description" content="Software Engineer (Ex-Google). Explore my projects, connect on LinkedIn, or get in touch.">
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Noah Luddy",
+            "jobTitle": "Software Engineer",
+            "description": "Software Engineer (Ex-Google)",
+            "url": "https://www.noahluddy.com",
+            "sameAs": [
+                "https://github.com/noahluddy",
+                "https://www.linkedin.com/in/noahluddy"
+            ]
+        }
+        </script>
+        
         <meta name="google-site-verification" content="i-QgyD0QhKy_1NoTFaoaSGyS6JBBjYHwEkN7vfniqgk" />
-        <title>Noah Luddy</title>
-        <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon" />
-        <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            html {
-                height: 100%;
-                font-family: 'Lato', sans-serif !important;
-                color: azure;
-                overflow: hidden;
-            }
-
-            body {
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-                background: linear-gradient(to bottom right, lightsalmon, steelblue);
-            }
-
-            #text-container {
-                position: relative;
-                margin-left: 6%;
-                margin-top: 6%;
-                font-weight: normal;
-                z-index: 10;
-                animation: fadeInUp 1s ease-out;
-            }
-
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @media (max-width: 768px) {
-                #text-container {
-                    margin-left: 4%;
-                    margin-top: 15%;
-                }
-                
-                #name {
-                    font-size: 36px;
-                }
-                
-                .subtitle {
-                    font-size: 22px;
-                }
-                
-                #links {
-                    font-size: 20px;
-                }
-            }
-
-            #name {
-                font-weight: inherit;
-                font-size: 48px;
-            }
-
-            #first-sub {
-                margin-top: -25px;
-            }
-
-            .subtitle {
-                font-weight: inherit;
-                margin-top: -15px;
-                font-size: 28px;
-            }
-
-            a {
-                text-decoration: none;
-                color: #1e90ff;
-                transition: color 0.3s ease;
-            }
-
-            a:hover {
-                text-decoration: underline;
-                color: #ffffff;
-            }
-
-            a:focus {
-                outline: 2px solid #ffffff;
-                outline-offset: 2px;
-            }
-
-            #links {
-                margin-top: 20px;
-                font-size: 23px;
-                font-weight: normal;
-            }
-
-            #particles-js {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-            }
-        </style>
+        <title>Noah Luddy - Software Engineer</title>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/favicon.ico?v=2" type="image/x-icon" />
+        <link rel="icon" href="assets/favicon.ico?v=2" type="image/x-icon" />
+        
+        <!-- Preload critical resources -->
+        <!-- Font loading: preload for performance, then convert to stylesheet once loaded -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" as="script">
+        <!-- Fallback font loading for users with JavaScript disabled -->
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"></noscript>
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
@@ -139,125 +83,7 @@
             </nav>
         </main>
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script>
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": {
-                        "value": 100,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ffffff"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        },
-                        "image": {
-                            "src": "img/github.svg",
-                            "width": 100,
-                            "height": 100
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 4,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": false,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": false,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": false,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 316.71011279752463,
-                            "line_linked": {
-                                "opacity": 0
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true
-            });
-
-            // Handle window resize to ensure particles cover full viewport
-            window.addEventListener('resize', function() {
-                if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
-                    window.pJSDom[0].pJS.fn.particlesRefresh();
-                }
-            });
-        </script>
+        <script src="js/particles.js"></script>
     </body>
 
 </html>

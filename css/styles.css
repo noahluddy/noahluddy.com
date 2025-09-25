@@ -1,0 +1,98 @@
+html {
+    height: 100%;
+    font-family: 'Lato', sans-serif !important;
+    color: azure;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, lightsalmon, steelblue);
+}
+
+#text-container {
+    position: relative;
+    margin-left: 6%;
+    margin-top: 6%;
+    font-weight: normal;
+    z-index: 10;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #text-container {
+        margin-left: 4%;
+        margin-top: 15%;
+    }
+    
+    #name {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 22px;
+    }
+    
+    #links {
+        font-size: 20px;
+    }
+}
+
+#name {
+    font-weight: inherit;
+    font-size: 48px;
+}
+
+#first-sub {
+    margin-top: -25px;
+}
+
+.subtitle {
+    font-weight: inherit;
+    margin-top: -15px;
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: #1e90ff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+a:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+#links {
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
