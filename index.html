@@ -10,6 +10,14 @@
             gtag('js', new Date());
 
             gtag('config', 'G-Y4X3YNG2MD');
+            
+            function showContactEmail() {
+                var win = window.open('', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300');
+                var doc = win.document;
+                doc.open();
+                doc.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{margin:0;padding:20px;font-family:"Lato",sans-serif;background-color:#ffffff;color:#000000;display:flex;align-items:center;justify-content:center;min-height:100vh;font-size:18px;}@media (prefers-color-scheme: dark){body{background-color:#1a1a1a;color:#ffffff;}}</style></head><body>noah [at] noahluddy [dot] com</body></html>');
+                doc.close();
+            }
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
@@ -76,7 +84,7 @@
                 <a href="https://github.com/noahluddy" target="_blank" rel="noopener">GitHub</a> /
                 <a href="https://www.linkedin.com/in/noahluddy" target="_blank" rel="noopener">LinkedIn</a> /
                 <a href="javascript:void(0)"
-                    onclick="var win = window.open('', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); win.document.body.innerHTML = 'noah [at] noahluddy [dot] com';"
+                    onclick="showContactEmail();"
                     title="Reveal my e-mail address">contact me</a>
                 <br><br>
                 <a href="https://noahluddy.github.io/get-motivated/" target="_blank" rel="noopener">Get Motivated!</a>
